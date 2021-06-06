@@ -18,29 +18,34 @@
   <body>
     <div class="container">
       <div class="frame">
-        <div class="row">
-          <h1>Current Weather in <span class="city-name" id="city-name">Portland</span></h1>
-          <span>
-            <p>
+        <div class="current row">
+          <div class="col-6">   <h1>Current Weather in <span class="city-name" id="city-name">Portland</span></h1>
+          <span></div>
+       <div class="col-6"> <h1>
               <span id="current-temperature" class="currentTemperature">63˚</span>
-              <span class="farenheit" id="farenheit">F/</span><span class="celsius" id="celsius"> C</span>
-            </p>
+              <span class="farenheit" id="farenheit">˚F/</span><span class="celsius" id="celsius">˚C</span>
+              <ul><li class="humidity" id="humidity">Humidity: <span class="realHumidity" id="real-humidity"></span></li><li class="wind" id="wind">Wind: <span class="realWind" id="real-wind"></span></li></ul>
+       </h1></div>
+           
             <img
               src="img/sunimage.svg"
               id="currentweather"
               alt="sun"
-              width="240px"
+              width="120px"
             />
           </span>
           <h2 id="date-time"></h2>
+               <button class="currentLocation" id="current-location">Current Location</button>
+               
+       
         </div>
-        <button class="currentLocation" id="current-location">Current Location</button>
+       
         <br />
         <form class="search-city" id="search-city">
           <input type="text" id="city-input" placeholder="search city..." />
           <input type="submit" placeholder="enter" />
         </form>
-        <div class="row">
+        <div class="forecast row">
           <div class="col-sm-2">
             <div class="card">
               <div class="card-body">
