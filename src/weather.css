@@ -1,0 +1,50 @@
+h1 {
+  text-align: center;
+  color: #040b33;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+.city-name {
+  color: #195b87;
+  font-weight: 300;
+}
+.currentTemperature {
+  margin-left: 140px;
+  margin-top: 20px;
+  line-height: 40px;
+  color: #195b87;
+  font-weight: bold;
+  font-size: 33px;
+}
+.currentLocation {
+  color: #195b87;
+  background-color: aliceblue;
+  border-radius: 15px;
+  transition: 10ms ease-in-out;
+  border-style: solid;
+}
+.farenheit {
+  color: #195b87;
+}
+.celsius {
+  color: #195b87;
+}
+.frame {
+  border-color: #1e2430;
+  border-style: solid;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 20px;
+}
+
+#currentweather {
+  padding: 20px;
+  float: inline-start;
+}
+.search-city {
+  text-align: center;
+  margin: 20px;
+}
+ul {
+  list-style-type: none;
+}

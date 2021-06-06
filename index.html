@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
+      crossorigin="anonymous"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="src/weather.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="frame">
+        <div class="row">
+          <h1>Current Weather in <span class="city-name" id="city-name">Portland</span></h1>
+          <span>
+            <p>
+              <span id="current-temperature" class="currentTemperature">63˚</span>
+              <span class="farenheit" id="farenheit">F/</span><span class="celsius" id="celsius"> C</span>
+            </p>
+            <img
+              src="img/sunimage.svg"
+              id="currentweather"
+              alt="sun"
+              width="240px"
+            />
+          </span>
+          <h2 id="date-time"></h2>
+        </div>
+        <button class="currentLocation" id="current-location">Current Location</button>
+        <br />
+        <form class="search-city" id="search-city">
+          <input type="text" id="city-input" placeholder="search city..." />
+          <input type="submit" placeholder="enter" />
+        </form>
+        <div class="row">
+          <div class="col-sm-2">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Wednesday</h5>
+                <p class="card-text"><ul>
+                  <li>
+                    H 72˚
+                  </li>
+                  <li>
+                    L 48˚
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Thursday</h5>
+                <p class="card-text"><ul>
+                  <li>
+                    H 72˚
+                  </li>
+                  <li>
+                    L 48˚
+                  </li>
+                </ul></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Friday</h5>
+                <p class="card-text"><ul>
+                  <li>
+                    H 72˚
+                  </li>
+                  <li>
+                    L 48˚
+                  </li>
+                </ul></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Saturday</h5>
+                <p class="card-text"><ul>
+                  <li>
+                    H 72˚
+                  </li>
+                  <li>
+                    L 48˚
+                  </li>
+                </ul></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Sunday</h5>
+                <p class="card-text"><ul>
+                  <li>
+                    H 72˚
+                  </li>
+                  <li>
+                    L 48˚
+                  </li>
+                </ul></p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-2">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Monday</h5>
+                <p class="card-text"><ul>
+                  <li>
+                    H 72˚
+                  </li>
+                  <li>
+                    L 48˚
+                  </li>
+                </ul></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+<script src="src/index.js"></script>
