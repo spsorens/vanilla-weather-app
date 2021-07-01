@@ -47,7 +47,7 @@ function showTemp(response) {
     `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
   );
 }
-
+//search city
 function searchCity(city) {
   let apiKey = "1f7c6137aa0f0d34113179b71073a3d7";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=imperial&appid=${apiKey}`;
@@ -59,7 +59,7 @@ function handleSubmit(event) {
   let city = document.querySelector("#city-input").value;
   searchCity(city);
 }
-
+//use location
 function searchLocation(position) {
   let apiKey = "1f7c6137aa0f0d34113179b71073a3d7";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${position.coords.latitude}&lon=${position.coords.longitude}&appid=${apiKey}&units=imperial`;
@@ -70,13 +70,8 @@ function getCurrentLocation(event) {
   event.preventDefault();
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
-function showFarenheitTemperature(event) {
-  event.preventDefault();
-  farenheitLink.classList.add("active");
-  celsiusLink.classList.remove("active");
-  let farenheitTemperature = document.querySelector("#current-temperature");
-  showTemp.innerHTML = Math.round(farenheitTemperature);
-}
+//farenheit&celsius link
+
 function showCelsiusTemperature(event) {
   event.preventDefault();
   celsiusLink.classList.add("active");
@@ -85,7 +80,13 @@ function showCelsiusTemperature(event) {
   let showTemp = document.querySelector("#current-temperature");
   showTemp.innerHTML = Math.round(celsiusTemperature);
 }
-
+function showFarenheitTemperature(event) {
+  event.preventDefault();
+  farenheitLink.classList.add("active");
+  celsiusLink.classList.remove("active");
+  let showTemp = document.querySelector("#current-temperature");
+  showTemp.innerHTML = Math.round(farenheitTemperature);
+}
 let farenheitTemperature = null;
 
 let searchForm = document.querySelector("#search-city");
@@ -94,10 +95,10 @@ searchForm.addEventListener("submit", handleSubmit);
 let currentLocationButton = document.querySelector("#current-location");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-let farenheitLink = document.querySelector("#farenheit-link");
-farenheitLink.addEventListener("click", showFarenheitTemperature);
-
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", showCelsiusTemperature);
+
+let farenheitLink = document.querySelector("#farenheit-link");
+farenheitLink.addEventListener("click", showFarenheitTemperature);
 
 searchCity("Portland");
