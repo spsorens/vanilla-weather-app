@@ -28,11 +28,7 @@ h1 {
   border-style: solid;
   border-color: #195b87;
 }
-.farenheit {
-  color: #195b87;
-  font-size: 30px;
-}
-.celsius {
+.units {
   color: #195b87;
   font-size: 30px;
 }
