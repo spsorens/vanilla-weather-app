@@ -28,9 +28,23 @@ h1 {
   border-style: solid;
   border-color: #195b87;
 }
-.units {
+#farenheit-link:hover {
+  color: #1a2564;
+  text-decoration: none;
+}
+#farenheit-link {
   color: #195b87;
-  font-size: 30px;
+  font-size: 25px;
+  text-decoration: none;
+}
+#celsius-link {
+  color: #195b87;
+  font-size: 25px;
+  text-decoration: none;
+}
+#celsius-link:hover {
+  color: #1a2564;
+  text-decoration: none;
 }
 .humidity {
   font-size: 22px;
