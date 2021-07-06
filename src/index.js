@@ -40,7 +40,7 @@ function displayForecast(response) {
   console.log(displayForecast);
   let forecastHTML = `<div class= "forecast row">`;
   forecast.forEach(function (forecastDay, index) {
-    if (index < 6) {
+    if (index < 7 && index > 0) {
       forecastHTML =
         forecastHTML +
         `   <div class="col-sm-2">
